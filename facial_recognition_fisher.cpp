@@ -45,7 +45,7 @@ int main()
     cv::Mat hillary;
     resize(cv::imread("/Users/benkrig/Desktop/ben9.jpg", CV_LOAD_IMAGE_GRAYSCALE), ben, size, 1.0, 1.0, cv::INTER_CUBIC);
     resize(cv::imread("/Users/benkrig/wwwbenkrigcom/public/blogs/ford/0.jpeg", CV_LOAD_IMAGE_GRAYSCALE), harrison, size, 1.0, 1.0, cv::INTER_CUBIC);
-    resize(cv::imread("/Users/benkrig/Desktop/hillary.jpg", CV_LOAD_IMAGE_GRAYSCALE), obama, size, 1.0, 1.0, cv::INTER_CUBIC);
+    resize(cv::imread("/Users/benkrig/Desktop/hillary.jpg", CV_LOAD_IMAGE_GRAYSCALE), hillary, size, 1.0, 1.0, cv::INTER_CUBIC);
     
     //These are ALL different images of Harrison Ford's face.
     images.push_back(cv::imread("/Users/benkrig/wwwbenkrigcom/public/blogs/ford/0.jpeg", CV_LOAD_IMAGE_GRAYSCALE));
@@ -113,7 +113,7 @@ int main()
     std::printf("second Label: %d\n", predicted_label);
     std::printf("second Confidence: %f\n", predicted_confidence);
     
-    model->predict(obama, predicted_label, predicted_confidence);
+    model->predict(hillary, predicted_label, predicted_confidence);
     std::printf("third Label: %d\n", predicted_label);
     std::printf("third Confidence: %f\n", predicted_confidence);
     
